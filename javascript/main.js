@@ -247,9 +247,11 @@
 //   console.log("sorry to young!");
 // }
 
+// LOOPS
+
 // the "while" loop
 
-// let i = 0;  
+// let i = 0;
 //  while(i < 10){
 // console.log(i);d
 // i++;
@@ -257,6 +259,21 @@
 
 //the "for" loop
 
-for(let i ){ 
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
 
+
+// FUNCTIONS
+
+// A block of code that performs a task
+
+
+// function declaration(defining a function)
+function square(num) {
+    console.log(num * num);
+  return num * num;
 }
+ 
+// funcion call(calling/executing a function)
+square(5);
