@@ -265,7 +265,7 @@
 
 // FUNCTIONS
 
-// A block of code that performs a task  
+// A block of code that performs a task
 
 // function declaration(defining a function)
 // function square(num) {
