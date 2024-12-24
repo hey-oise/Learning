@@ -291,8 +291,22 @@
 
 // arrow function
 
-// const name = (params) => {
-//     // statements
-// }
+ 
+function sayHi(name) {
+    console.log(`Hi ${name}`);
+}
+sayHi('joe')
 
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
+    sayHi() {
+        console.log(`Hi, my name is ${this.name} and I am ${this.age} years old`);
+    }
+}
+
+const person = new Person("Oise", 12);
+person.sayHi();
