@@ -291,7 +291,7 @@
 
 // arrow function
 
- 
+
 function sayHi(name) {
     console.log(`Hi ${name}`);
 }
@@ -310,4 +310,3 @@ class Person {
 
 const person = new Person("Oise", 12);=
 person.sayHi();
-
