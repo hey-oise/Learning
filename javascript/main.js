@@ -308,5 +308,6 @@ class Person {
     }
 }
 
-const person = new Person("Oise", 12);
+const person = new Person("Oise", 12);=
 person.sayHi();
+
