@@ -1,12 +1,101 @@
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.yr5tDBBOVrY77touUaTHCwHaDt%26pid%3DApi&f=1&ipt=38c38affc341636f992e6894567a0c1411aaf08565ae69978a915b7e7da8a069&ipo=images" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="box">
+        <p>hello my name is Daniel
+        </p>
+   </div> 
+   <div class="box2">44\</div>
+   <div class="loading-parent">
+    <div class="loading-bar">.</div>
+   </div>
+   <div class="img">
+    <img src="https://cdn.pixabay.com/animation/2024/12/02/02/56/02-56-03-27_256.gif" alt="">
+   </div>
 </body>
 </html>
 <script src="main.js"></script>     
+<style>
+    .box{
+        animation: exampleanim 1.5s alternate ease-in-out;
+        position: absolute;
+        color: black;
+        background-color: aqua;
+        transform: translate(400px, 400px) scale(1.1);
+        font-size: larger;
+    }
+    @keyframes exampleanim {
+        from {
+    font-size: small;
+    background-color: aquamarine;
+            color: rgba(0, 0, 0, 0);
+            transform: translate(0px, 0px) scale(0.1);
+        }
+        to {
+             transform: translate(400px, 400px) scale(1.1);
+             font-size: larger;
+             background-color: aqua;
+
+        }
+    }
+    .box2{
+        animation: box2 500ms infinite alternate ease-in-out;
+        background-color: black;
+        width: 150px;
+        height: 150px;
+         transform: translate(300px, 300px);
+    }
+    @keyframes box2 {
+        0%{
+           transform: translate(100px, 100px) scale(1.1);
+           background-color: rgb(212, 0, 255);
+        }
+    }
+
+    .loading-parent{
+        background-color: rgba(0, 0, 0, 0.445);
+        margin: 200px;
+        border-radius: 100px;
+        width: 600px;
+       
+    }
+    .loading-bar{
+        animation: loading 10s alternate ease-in-out;
+         background-color: rgb(149, 255, 0);
+         border-radius: 100px;
+         color: rgb(149, 255, 0);
+    }
+    @keyframes loading {
+       0%{
+    width: 2px;
+       }
+       25%{
+        width: 500px;
+        display: none;
+       }
+      50%{
+        width: 550px;
+      }
+      100%{
+        width: 600px;
+      }
+    }
+    .img{
+        animation: imganim 20s;
+        position: absolute;
+        transform: translate(1000%);
+
+    }
+    @keyframes imganim {
+        from{
+            transform: translate(0px);
+        }
+        to{
+            transform: translate(1000px);
+        }
+    }
+</style>
