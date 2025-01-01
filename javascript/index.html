@@ -9,20 +9,13 @@
         <p>hello my name is Daniel
         </p>
    </div> 
-   <div class="box2">44\</div>
+   <div class="box2"></div>
    <div class="loading-parent">
-    <div class="loading-bar">.</div>
+    <div class="loading-bar"> <pre> </pre></div>
    </div>
    <div class="img">
     <img src="https://cdn.pixabay.com/animation/2024/12/02/02/56/02-56-03-27_256.gif" alt="">
    </div>
-    <div class="card">
-      <h2>Card one</h2>
-    </div>
-    <audio autoplay loop>
-        <source src="/javascript/Burna_Boy_Dangote_9jaflaver.com_ (1).mp3" type="audio/mp3">
-    </audio>
-</body>
 </html>
 <script src="main.js"></script>     
 <style>
@@ -67,10 +60,9 @@
         margin: 200px;
         border-radius: 100px;
         width: 600px;
-       
     }
     .loading-bar{
-        animation: loading 10s alternate ease-in-out;
+        animation: loading 20s alternate ease-in-out;
          background-color: rgb(149, 255, 0);
          border-radius: 100px;
          color: rgb(149, 255, 0);
@@ -91,9 +83,9 @@
       }
     }
     .img{
-        animation: imganim 200s;
+        animation: imganim 10s;
         position: absolute;
-        transform: translate(1000%);
+        transform: translate(200vh);
 
     }
     @keyframes imganim {
@@ -101,41 +93,21 @@
             transform: translate(0px);
         }
         to{
-            transform: translate(1000px);
+            transform: translate(200vh);
         }
-    }
-    .card {
-      margin-top: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .slide-in-from-right {
-      animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
-    }
-    
-    @keyframes slideInFromRight {
-      0% {
-        transform: translateX(500px);
-        opacity: 0;
       }
-      100% {
-        transform: translateX(0);
-      }
-    }
 </style>
 <script>
     const startAnimation = (entries, observer) => {
       entries.forEach(entry => {
-        entry.target.classList.toggle("slide-in-from-right", entry.isIntersecting);
+        entry.target.classList.toggle("box", entry.isIntersecting);
       });
     };
     
     const observer = new IntersectionObserver(startAnimation);
     const options = { root: null, rootMargin: '0px', threshold: 1 }; 
     
-    const elements = document.querySelectorAll('.card');
+    const elements = document.querySelectorAll('.box');
     elements.forEach(el => {
       observer.observe(el, options);
     });
